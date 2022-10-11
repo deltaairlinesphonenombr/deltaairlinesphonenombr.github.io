@@ -1,0 +1,116 @@
+.demo{ background: #f1f1f1; }
+
+nav.navbar.bootsnav{
+    border: none;
+    background: none;
+    margin-bottom: 150px;
+}
+
+nav.navbar.bootsnav ul.nav > li > a{
+    padding: 14px 0 !important;
+    margin: 0 11px;
+    color: #797878;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    z-index: 1;
+	font-size:13px;
+    transition: all 0.5s ease 0s;
+}
+
+nav.navbar.bootsnav ul.nav > li.dropdown > a{
+    padding: 15px 30px 15px 0;
+}
+
+nav.navbar.bootsnav ul.nav > li > a:hover{ color: #797878; }
+
+nav.navbar.bootsnav ul.nav > li.dropdown.on > a{
+    color: #1cc7dd;
+    transition-delay: 0.6s;
+}
+
+nav.navbar.bootsnav ul.nav > li > a:before{
+    content: attr(data-hover);
+    width: 0;
+    padding: 14px 0;
+    color: #de9105;
+    border-bottom: 2px solid #de9105;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease 0s;
+}
+
+nav.navbar.bootsnav ul.nav > li> a:hover:before{ width: 100%; }
+
+nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after{
+    position: absolute;
+    margin: 0 0 0 7px;
+}
+
+nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:hover:after{
+    color: #1cc7dd;
+    transition: all 0.3s ease 0.25s;
+}
+
+nav.navbar.bootsnav ul.nav > li.dropdown > ul{
+    top: 106%;
+    left: -30px;
+    transition: all 0.8s ease 0s;
+}
+
+nav.navbar.bootsnav ul.nav > li.dropdown.on > ul{
+    top: 106%;
+    left: 0;
+}
+
+.dropdown-menu.multi-dropdown{
+    position: absolute;
+    left: -100% !important;
+}
+
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+@media only screen and (max-width:990px){
+    .dropdown-menu.multi-dropdown{ left: 0 !important; }
+    nav.navbar.bootsnav .navbar-toggle{
+        background: none;
+        color: #333;
+    }
+    nav.navbar.bootsnav.navbar-mobile ul.nav > li:before{
+        content: "";
+        width: 0;
+        border-bottom: 3px solid #1cc7dd;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: all 0.5s ease 0s;
+    }
+    nav.navbar.bootsnav.navbar-mobile ul.nav > li:hover:before{ width: 100%; }
+    nav.navbar.bootsnav.navbar-mobile ul.nav > li > a{
+        padding: 15px;
+        margin: 0;
+        text-align: center;
+    }
+    nav.navbar.bootsnav ul.nav > li > a{
+        color: #333;
+        border-top: none;
+    }
+    nav.navbar.bootsnav ul.nav > li > a:hover{ color: #333; }
+    nav.navbar.bootsnav ul.nav > li > a:before{
+        content: "";
+        width: 100%;
+        border-bottom: none;
+    }
+    nav.navbar.bootsnav li.dropdown a.dropdown-toggle:before{
+        color: #333;
+        left: 40%;
+    }
+    nav.navbar.bootsnav ul.nav > li.dropdown > ul{
+        top: 100%;
+        left: 0;
+    }
+}
